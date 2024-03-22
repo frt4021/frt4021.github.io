@@ -1,0 +1,79 @@
+/* login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Arkaplan rengi */
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Köşeleri oval yapmak için */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Başlık rengi */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; 
+    border-radius: 5px; 
+    transition: border-color 0.3s;
+    background-color: #f8f9fa;
+} 
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; 
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; 
+    border: none;
+    color: #fff;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+} 
+
+#have-account {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d; 
+}
+
+#have-account a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#have-account a:hover {
+    text-decoration: underline; 
+}
+
+

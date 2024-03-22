@@ -1,0 +1,104 @@
+/* index.css */
+
+/* Genel stiller */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* body'nin durumu ayarlandı */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header stilleri */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.header-buttons {
+    float: right;
+}
+
+.header-buttons .btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header-buttons .btn:hover {
+    background-color: #ccc;
+}
+
+
+nav {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* Footer sabitlendi */
+    bottom: 0; /* Sayfanın en altında */
+    width: 100%; /* Footer'ın genişliği sayfaya eşit */
+    z-index: 1000; /* Footer'ın diğer içeriklerin üstünde olması */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px; 
+}
+
+
+.header-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
