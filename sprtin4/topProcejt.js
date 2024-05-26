@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', fetchNews);
 
 function fetchNews() {
-    const apiKey = '630916754d7b48eeb673d0ab22092b15';
+    const apiKey = 'cf0238b67c2c4d1d96eb05960fc4ff5a';
     const url = `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}`;
 
     const xhr = new XMLHttpRequest();
