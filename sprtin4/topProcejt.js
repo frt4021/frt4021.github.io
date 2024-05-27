@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', fetchNews);
 function fetchNews() {
     const apiKey = '630916754d7b48eeb673d0ab22092b15';
     const url = `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}`;
-     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-     const fullUrl = proxyUrl + url
+
+    // Optionally use a CORS proxy
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const fullUrl = proxyUrl + url;
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open('GET', fullUrl, true); // Use fullUrl if using the CORS proxy
     xhr.onload = function() {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
@@ -15,7 +17,6 @@ function fetchNews() {
             let output = '';
 
             articles.forEach(article => {
-                // Haberlerde resim var mı kontrol et
                 const imageUrl = article.urlToImage ? article.urlToImage : 'placeholder.jpg'; // Eğer resim yoksa yerine bir placeholder koyabilirsiniz
 
                 output += `
