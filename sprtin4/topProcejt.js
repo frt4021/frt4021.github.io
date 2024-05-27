@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', fetchNews);
 
 function fetchNews() {
     const apiKey = '630916754d7b48eeb673d0ab22092b15';
-    const originalUrl = 'https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=' + apiKey;
-    const proxyUrl = 'https://corsproxy.io/';
+    const url = `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}`;
+
+    // Optionally use a CORS proxy
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const fullUrl = proxyUrl + url;
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', proxyUrl + '?url=' + encodeURIComponent(originalUrl), true);
-
-    xhr.setRequestHeader('x-requested-with', 'XMLHttpRequest');
-
+    xhr.open('GET', fullUrl, true); // Use fullUrl if using the CORS proxy
     xhr.onload = function() {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
@@ -17,7 +17,7 @@ function fetchNews() {
             let output = '';
 
             articles.forEach(article => {
-                const imageUrl = article.urlToImage ? article.urlToImage : 'placeholder.jpg';
+                const imageUrl = article.urlToImage ? article.urlToImage : 'placeholder.jpg'; // Eğer resim yoksa yerine bir placeholder koyabilirsiniz
 
                 output += `
                     <div class="news-item">
@@ -36,10 +36,5 @@ function fetchNews() {
             console.error('Error occurred!');
         }
     };
-
-    xhr.onerror = function() {
-        console.error('Request error!');
-    };
-
     xhr.send();
 }
