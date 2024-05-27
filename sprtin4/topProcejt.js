@@ -4,12 +4,10 @@ function fetchNews() {
     const apiKey = '630916754d7b48eeb673d0ab22092b15';
     const url = `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}`;
 
-    // Optionally use a CORS proxy
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const fullUrl = proxyUrl + url;
+
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', fullUrl, true); // Use fullUrl if using the CORS proxy
+    xhr.open('GET', url, true); // Use fullUrl if using the CORS proxy
     xhr.onload = function() {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
