@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', fetchNews);
 function fetchNews() {
     const apiKey = '630916754d7b48eeb673d0ab22092b15';
     const originalUrl = 'https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=' + apiKey;
-    const url = 'https://corsproxy.io/?' + encodeURIComponent(originalUrl);
+    const proxyUrl = 'https://corsproxy.io/';
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open('GET', proxyUrl + '?url=' + encodeURIComponent(originalUrl), true);
+
+    xhr.setRequestHeader('x-requested-with', 'XMLHttpRequest');
 
     xhr.onload = function() {
         if (this.status === 200) {
