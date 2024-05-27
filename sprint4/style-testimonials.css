@@ -1,0 +1,51 @@
+/* Genel stiller */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Font ayarı */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Testimonial stilleri */
+.testimonial {
+    margin-bottom: 40px; /* Aralıkları artırdık */
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f9f9f9; /* Arka plan rengi */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-name {
+    margin-top: 10px; /* Aralığı artırdık */
+    font-weight: bold;
+    color: #4d4d4d; /* Metin rengi */
+}
+
+/* Konuşma balonlarının stil ayarları */
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #f9f9f9 transparent transparent; /* Renk uyumu */
+    border-style: solid;
+}
