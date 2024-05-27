@@ -10,6 +10,11 @@ function fetchNews() {
 
     const xhr = new XMLHttpRequest();
     xhr.open('GET', fullUrl, true); // Use fullUrl if using the CORS proxy
+
+    // Add the required headers
+    xhr.setRequestHeader('origin', 'https://yourdomain.com'); // replace with your domain
+    xhr.setRequestHeader('x-requested-with', 'XMLHttpRequest');
+
     xhr.onload = function() {
         if (this.status === 200) {
             const response = JSON.parse(this.responseText);
@@ -35,6 +40,9 @@ function fetchNews() {
         } else {
             console.error('Error occurred!');
         }
+    };
+    xhr.onerror = function() {
+        console.error('Request error!');
     };
     xhr.send();
 }
