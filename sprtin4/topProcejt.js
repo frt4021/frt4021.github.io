@@ -12,7 +12,7 @@ function fetchNews() {
     xhr.open('GET', fullUrl, true); // Use fullUrl if using the CORS proxy
 
     // Add the required headers
-    xhr.setRequestHeader('origin', 'https://yourdomain.com'); // replace with your domain
+    xhr.setRequestHeader('origin', 'https://frt4021.github.io'); // replace with your domain
     xhr.setRequestHeader('x-requested-with', 'XMLHttpRequest');
 
     xhr.onload = function() {
