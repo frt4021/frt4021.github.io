@@ -1,0 +1,103 @@
+/* Genel Stil */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #1A1A40;
+    color: #F1F1F1;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+  
+  /* Navbar */
+  header {
+    background: #121232;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #F1F1F1;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #70E3A3;
+  }
+  
+  /* Contact Section */
+  .contact {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #F1F1F1;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .contact-icon {
+    color: #F1F1F1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .contact-icon:hover {
+    color: #70E3A3;
+  }
+  
+  .contact-icon i {
+    font-size: 1.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    background: #121232;
+    font-size: 0.8rem;
+  }
+  
+  .socials a {
+    color: #8E9AAF;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  
+  .socials a:hover {
+    color: #70E3A3;
+  }
+  

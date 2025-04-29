@@ -1,0 +1,180 @@
+/* Genel ayarlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #1A1A40;
+    color: #F1F1F1;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 50px; /* Footer'ın alt kısmına yer bırakmak için */
+}
+
+/* Navbar */
+header {
+    background: #121232;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #F1F1F1;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #70E3A3;
+}
+
+/* About bölümündeki stil */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #1A1A40;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.about-section img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2rem; /* Resmin altındaki boşluğu ayarladım */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #3A86FF;
+    font-weight: 600;
+}
+
+.about-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #8E9AAF;
+    margin-bottom: 2rem;
+}
+
+/* CV Bağlantıları */
+.cv-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.cv-link {
+    background-color: #3A86FF;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: #70E3A3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    background: #121232;
+    font-size: 0.8rem;
+}
+
+footer .socials a {
+    color: #8E9AAF;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer .socials a:hover {
+    color: #70E3A3;
+}
+
+/* Fade-in animasyonları */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-text.delay {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about-section img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .cv-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cv-link {
+        padding: 10px 20px;
+    }
+}
