@@ -114,3 +114,20 @@ footer {
     text-decoration: none;
     margin: 0 8px;
 }
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .fade-in-text.delay {
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
