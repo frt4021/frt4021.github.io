@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Firat Bilgen</title>
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-  <div style="text-align: center; padding: 50px;">
-    <h1>This page is coming soon. Stay tuned!</h1>
-  </div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>My Projects</h1>
+        <p>Explore some of the projects I've worked on</p>
+    </section>
+
+    <!-- Project Section -->
+    <section class="projects">
+        <div class="project-card">
+            <h3>IoT Security Companion Application Vulnerabilities and Simulations</h3>
+            <p>This project focuses on identifying vulnerabilities in companion apps that directly affect IoT devices. The aim is to create a testing environment to simulate the behavior of IoT devices and analyze their firmware, detecting security flaws without the need for physical devices.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Parallelization of Edge Detection Algorithms</h3>
+            <p>This project enhances the performance of the Robert edge detection algorithm by using CUDA for GPU, MPI for CPU cores, and OpenMP for multi-threading. It compares various parallelization techniques to assess acceleration and efficiency.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Spell Check Algorithm</h3>
+            <p>A spelling check system developed based on the QWERTY keyboard layout using a graph and Levenshtein distance algorithm. The project focuses on detecting user errors and suggesting corrections, taking into account the Turkish QWERTY keyboard layout and character similarities.</p>
+        </div>
+
+        <!-- More project cards as needed -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Firat Bilgen. All rights reserved.</p>
+        <div class="socials">
+          <a href="https://github.com/frt4021">GitHub</a> | <a href="https://www.linkedin.com/in/f%C4%B1rat-bilgen-8b622a1b8/">LinkedIn</a> 
+        </div>
+      </footer>
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
